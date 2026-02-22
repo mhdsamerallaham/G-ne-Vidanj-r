@@ -20,9 +20,16 @@ export async function generateMetadata({ params }: PageProps) {
 
 export default async function DistrictPage({ params }: PageProps) {
   const { slug } = await params;
-  const district = await prisma.districtPage.findUnique({
-    where: { district: slug },
-  });
+  let district;
+  
+  try {
+    district = await prisma.districtPage.findUnique({
+      where: { district: slug },
+    });
+  } catch (error) {
+    console.error("Error fetching district page:", error);
+    notFound();
+  }
 
   if (!district || !district.published) {
     notFound();

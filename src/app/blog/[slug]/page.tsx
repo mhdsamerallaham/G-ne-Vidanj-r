@@ -47,18 +47,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export async function generateStaticParams() {
-  try {
-    const posts = await prisma.blogPost.findMany({
-      where: { published: true },
-      select: { slug: true },
-    });
-    return posts.map((post) => ({
-      slug: post.slug,
-    }));
-  } catch (error) {
-    console.error("Error generating static params:", error);
-    return [];
-  }
+  // Return empty array to make pages dynamic during build
+  // This prevents build failures when database is not available
+  return [];
 }
 
 export default async function BlogPostPage({ params }: Props) {

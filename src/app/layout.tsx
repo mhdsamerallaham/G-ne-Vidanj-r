@@ -13,7 +13,13 @@ const inter = Inter({
 });
 
 export async function generateMetadata(): Promise<Metadata> {
-  const settings = await getSettings();
+  let settings = null;
+  try {
+    settings = await getSettings();
+  } catch (error) {
+    console.error("Error fetching settings for metadata:", error);
+    // Continue with default settings if database is not available
+  }
   
   return {
     metadataBase: new URL("https://gunesvidanjor.com"),
@@ -37,7 +43,13 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const settings = await getSettings();
+  let settings = null;
+  try {
+    settings = await getSettings();
+  } catch (error) {
+    console.error("Error fetching settings for layout:", error);
+    // Continue with default settings if database is not available
+  }
 
   return (
     <html lang="tr">

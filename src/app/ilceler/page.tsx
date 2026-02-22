@@ -18,10 +18,16 @@ export default async function DistrictsIndexPage() {
   ];
 
   // Dynamic districts from DB
-  const dynamicDistricts = await prisma.districtPage.findMany({
-    where: { published: true },
-    select: { title: true, district: true },
-  });
+  let dynamicDistricts: { title: string; district: string }[] = [];
+  try {
+    dynamicDistricts = await prisma.districtPage.findMany({
+      where: { published: true },
+      select: { title: true, district: true },
+    });
+  } catch (error) {
+    console.error("DistrictPage fetch error:", error);
+    // Continue with empty array if database is not available
+  }
 
   // Filter out dynamic districts that are already in static list (if any conflict)
   const filteredDynamic = dynamicDistricts.filter(

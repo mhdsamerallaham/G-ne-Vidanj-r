@@ -20,9 +20,16 @@ export async function generateMetadata({ params }: PageProps) {
 
 export default async function ServicePage({ params }: PageProps) {
   const { slug } = await params;
-  const service = await prisma.servicePage.findUnique({
-    where: { slug },
-  });
+  let service;
+  
+  try {
+    service = await prisma.servicePage.findUnique({
+      where: { slug },
+    });
+  } catch (error) {
+    console.error("Error fetching service page:", error);
+    notFound();
+  }
 
   if (!service || !service.published) {
     notFound();

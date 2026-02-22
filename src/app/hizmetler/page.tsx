@@ -44,10 +44,16 @@ export default async function ServicesIndexPage() {
   ];
 
   // Dynamic services from DB
-  const dynamicServices = await prisma.servicePage.findMany({
-    where: { published: true },
-    select: { title: true, description: true, slug: true },
-  });
+  let dynamicServices: { title: string; description: string; slug: string }[] = [];
+  try {
+    dynamicServices = await prisma.servicePage.findMany({
+      where: { published: true },
+      select: { title: true, description: true, slug: true },
+    });
+  } catch (error) {
+    console.error("ServicePage fetch error:", error);
+    // Continue with empty array if database is not available
+  }
 
   return (
     <div className="min-h-screen bg-gray-50 py-20">
