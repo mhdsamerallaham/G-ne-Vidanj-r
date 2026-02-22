@@ -1,0 +1,73 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider        = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+}
+
+model Lead {
+  id        String   @id @default(cuid())
+  name      String
+  phone     String
+  service   String
+  district  String
+  source    String   @default("website")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model BlogPost {
+  id          String   @id @default(cuid())
+  title       String
+  slug        String   @unique
+  content     String
+  excerpt     String
+  image       String?
+  published   Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model ServicePage {
+  id          String   @id @default(cuid())
+  title       String
+  slug        String   @unique
+  content     String
+  description String
+  image       String?
+  published   Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model DistrictPage {
+  id          String   @id @default(cuid())
+  district    String   @unique
+  title       String
+  content     String
+  description String
+  image       String?
+  published   Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model SiteSettings {
+  id                  String   @id @default(cuid())
+  googleVerification  String?  // Google Search Console
+  bingVerification    String?  // Bing Webmaster Tools
+  yandexVerification  String?  // Yandex Webmaster
+  googleAnalyticsId   String?  // G-XXXXXXXXXX
+  googleMapsApiKey    String?  // Google Maps API Key
+  contactPhone        String?  @default("+905335817936")
+  contactEmail        String?  @default("info@gunesvidanjor.com")
+  contactAddress      String?  @default("Antalya, Türkiye")
+  updatedAt           DateTime @updatedAt
+}
