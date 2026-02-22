@@ -23,21 +23,30 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "/ilceler/alanya",
   ];
 
-  // Fetch dynamic content
-  const [blogPosts, servicePages, districtPages] = await Promise.all([
-    prisma.blogPost.findMany({
-      where: { published: true },
-      select: { slug: true, updatedAt: true },
-    }),
-    prisma.servicePage.findMany({
-      where: { published: true },
-      select: { slug: true, updatedAt: true },
-    }),
-    prisma.districtPage.findMany({
-      where: { published: true },
-      select: { district: true, updatedAt: true },
-    }),
-  ]);
+  // Fetch dynamic content with error handling
+  let blogPosts: any[] = [];
+  let servicePages: any[] = [];
+  let districtPages: any[] = [];
+
+  try {
+    [blogPosts, servicePages, districtPages] = await Promise.all([
+      prisma.blogPost.findMany({
+        where: { published: true },
+        select: { slug: true, updatedAt: true },
+      }),
+      prisma.servicePage.findMany({
+        where: { published: true },
+        select: { slug: true, updatedAt: true },
+      }),
+      prisma.districtPage.findMany({
+        where: { published: true },
+        select: { district: true, updatedAt: true },
+      }),
+    ]);
+  } catch (error) {
+    console.error("Error fetching dynamic content for sitemap:", error);
+    // Continue with empty arrays if database is not available
+  }
 
   const staticEntries: MetadataRoute.Sitemap = staticRoutes.map((route) => ({
     url: `${baseUrl}${route}`,
