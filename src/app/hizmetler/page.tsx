@@ -5,7 +5,7 @@ import { ArrowRight, Truck } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Tüm Hizmetlerimiz - Güneş Vidanjör Antalya",
-  description: "Antalya'da sunduğumuz tüm vidanjör ve altyapı hizmetleri. Tıkalı gider açma, foseptik boşaltma, logar temizleme ve daha fazlası.",
+  description: "Antalya'da sunduğumuz tüm vidanjör ve altyapı hizmetleri. Tıkalı gider açma, logar temizleme ve daha fazlası.",
 };
 
 export default async function ServicesIndexPage() {
@@ -20,11 +20,6 @@ export default async function ServicesIndexPage() {
       title: "Tıkalı Gider Açma",
       description: "Mutfak, banyo ve lavabo tıkanıklıkları",
       href: "/antalya-tikali-gider-acma",
-    },
-    {
-      title: "Foseptik Boşaltma",
-      description: "Foseptik çukuru temizleme ve boşaltma",
-      href: "/antalya-foseptik-bosaltma",
     },
     {
       title: "Kanalizasyon Açma",

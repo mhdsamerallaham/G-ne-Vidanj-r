@@ -5,7 +5,7 @@ import { MapPin, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Hizmet Bölgelerimiz - Güneş Vidanjör Antalya",
-  description: "Antalya'nın tüm ilçelerinde vidanjör, tıkalı gider açma ve foseptik boşaltma hizmeti veriyoruz. Kepez, Muratpaşa, Konyaaltı ve tüm ilçeler.",
+  description: "Antalya'nın tüm ilçelerinde vidanjör, tıkalı gider açma ve kanalizasyon temizleme hizmeti veriyoruz. Kepez, Muratpaşa, Konyaaltı ve tüm ilçeler.",
 };
 
 export default async function DistrictsIndexPage() {
@@ -14,7 +14,6 @@ export default async function DistrictsIndexPage() {
     { name: "Kepez", slug: "kepez" },
     { name: "Muratpaşa", slug: "muratpasa" },
     { name: "Konyaaltı", slug: "konyaalti" },
-    { name: "Alanya", slug: "alanya" },
   ];
 
   // Dynamic districts from DB

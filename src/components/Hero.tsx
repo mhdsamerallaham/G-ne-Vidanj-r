@@ -62,9 +62,9 @@ export default function Hero() {
                 </span>
               </div>
               <p className="text-xl text-gray-300 leading-relaxed">
-                Tıkalı gider, kanalizasyon ve foseptik sorunları için{' '}
+                Tıkalı gider ve kanalizasyon sorunları için{' '}
                 <strong className="text-white">30 dakikada</strong> müdahale.
-                Uygun fiyat ve <strong className="text-white">1 yıl garanti</strong>.
+                Uygun fiyat ve <strong className="text-white">kaliteli hizmet</strong>.
               </p>
             </div>
 
@@ -122,8 +122,8 @@ export default function Hero() {
                   <Shield className="h-5 w-5 text-purple-400" />
                 </div>
                 <div>
-                  <p className="font-semibold text-white text-sm">1 Yıl</p>
-                  <p className="text-xs text-gray-400">Garanti</p>
+                  <p className="font-semibold text-white text-sm">Kalite</p>
+                  <p className="text-xs text-gray-400">Güvencesi</p>
                 </div>
               </div>
             </div>

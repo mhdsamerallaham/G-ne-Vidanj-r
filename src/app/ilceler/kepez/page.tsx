@@ -6,7 +6,7 @@ import { MapPin, Clock, Phone, CheckCircle, Truck, AlertTriangle } from "lucide-
 export async function generateMetadata(): Promise<Metadata> {
   return generateDistrictPageMetadata("kepez", {
     title: "Kepez Vidanjör Hizmeti - 30 Dakikada Müdahale",
-    description: "Kepez'de vidanjör, tıkalı gider açma, foseptik boşaltma hizmetleri. 30 dakikada müdahale, uygun fiyat, garantili çözüm. Çağlayan, Varsak, Kütükçü ve tüm Kepez mahalleleri.",
+    description: "Kepez'de vidanjör, tıkalı gider açma hizmetleri. 30 dakikada müdahale, uygun fiyat. Çağlayan, Varsak, Kütükçü ve tüm Kepez mahalleleri.",
     canonical: "/ilceler/kepez",
   });
 }
@@ -35,7 +35,7 @@ const jsonLd = {
   "@graph": [
     generateServiceSchema(
       "Kepez Vidanjör Hizmeti",
-      "Kepez'de vidanjör, tıkalı gider açma, foseptik boşaltma hizmetleri. 30 dakikada müdahale.",
+      "Kepez'de vidanjör, tıkalı gider açma hizmetleri. 30 dakikada müdahale.",
       "+90 533 581 79 36"
     ),
     generateFAQSchema(faqs)
@@ -79,8 +79,8 @@ export default function KepezVidanjor() {
                   <span className="text-orange-600"> Hizmeti</span>
                 </h1>
                 <p className="text-xl text-gray-600 leading-relaxed">
-                  Kepez'in tüm mahallelerine vidanjör, tıkalı gider açma ve foseptik hizmetleri. 
-                  15-30 dakikada müdahale, uygun fiyat garantisi.
+                  Kepez'in tüm mahallelerine vidanjör ve tıkalı gider açma hizmetleri. 
+                  15-30 dakikada müdahale, uygun fiyat.
                 </p>
               </div>
 
@@ -238,25 +238,6 @@ export default function KepezVidanjor() {
               </ul>
             </div>
 
-            <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
-              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
-                <Phone className="h-8 w-8 text-green-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Foseptik Boşaltma</h3>
-              <p className="text-gray-600 mb-4">
-                Kepez'deki foseptik çukurlarının düzenli boşaltma ve bakımı.
-              </p>
-              <ul className="space-y-2 text-sm text-gray-700">
-                <li className="flex items-center space-x-2">
-                  <CheckCircle className="h-4 w-4 text-green-600" />
-                  <span>Periyodik bakım</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <CheckCircle className="h-4 w-4 text-green-600" />
-                  <span>Çevre dostu</span>
-                </li>
-              </ul>
-            </div>
           </div>
         </div>
       </section>

@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { Phone, Menu, X } from 'lucide-react';
 import { useState } from 'react';
+import Logo from './Logo';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,7 +11,6 @@ export default function Navbar() {
   const services = [
     { name: 'Vidanjör', href: '/antalya-vidanjor' },
     { name: 'Tıkalı Gider Açma', href: '/antalya-tikali-gider-acma' },
-    { name: 'Foseptik Boşaltma', href: '/antalya-foseptik-bosaltma' },
     { name: 'Kanalizasyon Açma', href: '/antalya-kanalizasyon-acma' },
     { name: 'Logar Temizleme', href: '/antalya-logar-temizleme' },
     { name: 'Yağ Tutucu Temizleme', href: '/antalya-yag-tutucu-temizleme' },
@@ -22,8 +22,6 @@ export default function Navbar() {
     { name: 'Konyaaltı', href: '/ilceler/konyaalti' },
     { name: 'Döşemealtı', href: '/ilceler/dosemealti' },
     { name: 'Aksu', href: '/ilceler/aksu' },
-    { name: 'Manavgat', href: '/ilceler/manavgat' },
-    { name: 'Alanya', href: '/ilceler/alanya' },
     { name: 'Kemer', href: '/ilceler/kemer' },
     { name: 'Serik', href: '/ilceler/serik' },
   ];
@@ -33,15 +31,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-            <Link href="/" className="flex items-center space-x-2">
-              <div className="bg-orange-500 text-white p-2 rounded-lg">
-                <Phone className="h-6 w-6" />
-              </div>
-              <div>
-                <h1 className="text-xl font-bold text-gray-900">Güneş Vidanjör</h1>
-                <p className="text-xs text-gray-600">7/24 Acil Müdahale</p>
-              </div>
-            </Link>
+            <Logo size="md" withText />
           </div>
 
           {/* Desktop Menu */}

@@ -7,7 +7,7 @@ import { BlogPost } from "@prisma/client";
 
 export const metadata: Metadata = generateMetadata({
   title: "Vidanjör Blog - Antalya Kanal Temizleme Rehberi",
-  description: "Antalya vidanjör hizmetleri, tıkalı gider açma, foseptik bakımı hakkında bilgilendirici blog yazıları. Uzman tavsiyeleri ve çözümler.",
+  description: "Antalya vidanjör hizmetleri ve tıkalı gider açma hakkında bilgilendirici blog yazıları. Uzman tavsiyeleri ve çözümler.",
   canonical: "/blog",
 });
 

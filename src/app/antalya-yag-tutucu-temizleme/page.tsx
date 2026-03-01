@@ -173,7 +173,7 @@ export default function AntalyaYagTutucuTemizleme() {
                   </div>
                   <div>
                     <p className="font-semibold text-gray-900">Sertifika</p>
-                    <p className="text-sm text-gray-600">Garantisi</p>
+                    <p className="text-sm text-gray-600">Belgesi</p>
                   </div>
                 </div>
               </div>

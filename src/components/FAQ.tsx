@@ -51,20 +51,17 @@ export default function FAQSection() {
     },
     {
       question: "Hangi ilçelere hizmet veriyorsunuz?",
-      answer: "Antalya'nın tüm ilçelerine hizmet veriyoruz: Kepez, Muratpaşa, Konyaaltı, Döşemealtı, Aksu, Manavgat, Alanya, Kemer, Serik ve diğer tüm ilçeler."
+      answer: "Antalya'nın tüm ilçelerine hizmet veriyoruz: Kepez, Muratpaşa, Konyaaltı, Döşemealtı, Aksu, Kemer, Serik ve diğer tüm ilçeler."
     },
     {
       question: "Kameralı tespit hizmeti var mı?",
       answer: "Evet, modern kameralı sistemlerimizle tıkanıklığın yerini ve nedenini tam olarak tespit ediyoruz. Bu sayede daha hızlı ve isabetli çözüm sunuyoruz."
     },
     {
-      question: "Garanti veriyor musunuz?",
-      answer: "Yaptığımız tüm işlere 1 yıl mekanik garanti veriyoruz. Aynı sorunun tekrar etmesi durumunda ücretsiz müdahale ediyoruz."
+      question: "Kalite güvencesi veriyor musunuz?",
+      answer: "Yaptığımız tüm işlerde kalite standartlarını koruyoruz. Aynı sorunun tekrar etmesi durumunda ücretsiz müdahale ediyoruz."
     },
-    {
-      question: "Foseptik çukuru boşaltma fiyatı ne kadar?",
-      answer: "Foseptik çukuru boyutuna ve doluluk oranına göre fiyat değişmektedir. ortalama 1.500-3.000 TL arasında değişmektedir. Net fiyat için bize ulaşabilirsiniz."
-    },
+    // removed: foseptik boşaltma FAQ
     {
       question: "Ödeme seçenekleri nelerdir?",
       answer: "Nakit, kredi kartı ve havale/EFT ile ödeme kabul ediyoruz. Büyük işler için taksit imkanı da sağlıyoruz."

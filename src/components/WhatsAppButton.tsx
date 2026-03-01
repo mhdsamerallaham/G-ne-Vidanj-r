@@ -56,7 +56,7 @@ export default function WhatsAppButton() {
         {showTooltip && (
           <div className="absolute right-16 bottom-0 bg-gray-900 text-white text-sm rounded-xl px-4 py-3 whitespace-nowrap shadow-xl">
             <div className="font-semibold">WhatsApp&apos;tan yazın!</div>
-            <div className="text-gray-300 text-xs">Hızlı yanıt garantisi</div>
+            <div className="text-gray-300 text-xs">Hızlı yanıt</div>
             {/* Arrow */}
             <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 w-0 h-0 border-l-8 border-l-gray-900 border-y-8 border-y-transparent"></div>
           </div>

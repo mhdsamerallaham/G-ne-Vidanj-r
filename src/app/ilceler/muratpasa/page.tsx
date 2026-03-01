@@ -7,7 +7,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return generateDistrictPageMetadata("muratpasa", {
     title: "Muratpaşa Vidanjör Hizmeti - 20 Dakikada Müdahale",
     description:
-      "Muratpaşa'da vidanjör, tıkalı gider açma, foseptik boşaltma hizmetleri. 20 dakikada müdahale, uygun fiyat, garantili çözüm. Konyaaltı, Lara, Yenişehir ve tüm Muratpaşa mahalleleri.",
+      "Muratpaşa'da vidanjör ve tıkalı gider açma hizmetleri. 20 dakikada müdahale, uygun fiyat. Konyaaltı, Lara, Yenişehir ve tüm Muratpaşa mahalleleri.",
     canonical: "/ilceler/muratpasa",
   });
 }
@@ -36,7 +36,7 @@ const jsonLd = {
   "@graph": [
     generateServiceSchema(
       "Muratpaşa Vidanjör Hizmeti",
-      "Muratpaşa'da vidanjör, tıkalı gider açma, foseptik boşaltma hizmetleri. 20 dakikada müdahale.",
+      "Muratpaşa'da vidanjör ve tıkalı gider açma hizmetleri. 20 dakikada müdahale.",
       "+90 533 581 79 36"
     ),
     generateFAQSchema(faqs)
@@ -81,7 +81,7 @@ export default function MuratpasaVidanjor() {
                   <span className="text-blue-600"> Hizmeti</span>
                 </h1>
                 <p className="text-xl text-gray-600 leading-relaxed">
-                  Muratpaşa'nın tüm mahallelerine vidanjör, tıkalı gider açma ve foseptik hizmetleri. 
+                  Muratpaşa'nın tüm mahallelerine vidanjör ve tıkalı gider açma hizmetleri. 
                   15-30 dakikada müdahale, turistik bölge özel hizmet.
                 </p>
               </div>

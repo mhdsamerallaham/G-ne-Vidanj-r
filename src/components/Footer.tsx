@@ -5,7 +5,6 @@ export default function Footer() {
   const services = [
     { name: 'Antalya Vidanjör', href: '/antalya-vidanjor' },
     { name: 'Tıkalı Gider Açma', href: '/antalya-tikali-gider-acma' },
-    { name: 'Foseptik Boşaltma', href: '/antalya-foseptik-bosaltma' },
     { name: 'Kanalizasyon Açma', href: '/antalya-kanalizasyon-acma' },
     { name: 'Logar Temizleme', href: '/antalya-logar-temizleme' },
     { name: 'Yağ Tutucu Temizleme', href: '/antalya-yag-tutucu-temizleme' },
@@ -17,7 +16,6 @@ export default function Footer() {
     { name: 'Konyaaltı Vidanjör', href: '/ilceler/konyaalti' },
     { name: 'Döşemealtı Vidanjör', href: '/ilceler/dosemealti' },
     { name: 'Aksu Vidanjör', href: '/ilceler/aksu' },
-    { name: 'Manavgat Vidanjör', href: '/ilceler/manavgat' },
   ];
 
   return (
@@ -36,7 +34,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-gray-300 text-sm">
-              Antalya'nın tüm ilçelerinde vidanjör, tıkalı gider açma, foseptik boşaltma ve kanalizasyon temizleme hizmetleri. Uygun fiyat, garantili çözüm.
+              Antalya'nın tüm ilçelerinde vidanjör, tıkalı gider açma ve kanalizasyon temizleme hizmetleri. Uygun fiyat, kaliteli çözüm.
             </p>
             <div className="flex space-x-4">
               <a

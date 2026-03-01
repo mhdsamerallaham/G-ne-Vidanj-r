@@ -115,8 +115,8 @@ export default async function ServicePage({ params }: PageProps) {
             </div>
             <div className="bg-blue-50 p-6 rounded-xl border border-blue-100">
               <Shield className="h-10 w-10 text-blue-600 mb-4" />
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Garantili Çözüm</h3>
-              <p className="text-gray-600">Yaptığımız işlemlere garanti veriyoruz.</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Profesyonel Çözüm</h3>
+              <p className="text-gray-600">Yaptığımız işlemlerde kalite standartlarını koruyoruz.</p>
             </div>
             <div className="bg-green-50 p-6 rounded-xl border border-green-100">
               <CheckCircle className="h-10 w-10 text-green-600 mb-4" />

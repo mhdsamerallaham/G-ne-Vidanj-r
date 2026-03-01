@@ -7,7 +7,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return generateServicePageMetadata("antalya-tikali-gider-acma", {
     title: "Antalya Tıkalı Gider Açma - Kameralı Tespit 30 Dakikada",
     description:
-      "Antalya'da tıkalı gider açma hizmeti. Kameralı tespit ile mutfak, banyo, lavabo tıkanıklıklarına çözüm. 30 dakikada müdahale, garantili hizmet, uygun fiyat.",
+      "Antalya'da tıkalı gider açma hizmeti. Kameralı tespit ile mutfak, banyo, lavabo tıkanıklıklarına çözüm. 30 dakikada müdahale, kaliteli hizmet, uygun fiyat.",
     canonical: "/antalya-tikali-gider-acma",
   });
 }
@@ -30,8 +30,8 @@ const faqs = [
     answer: "Mutfak giderleri, banyo lavaboları, duş giderleri, klozetler, çamaşır makinesi giderleri ve tüm boru hatlarını açıyoruz."
   },
   {
-    question: "Garanti veriyor musunuz?",
-    answer: "Evet, yaptığımız tüm gider açma işlemlerine 6 ay garanti veriyoruz."
+    question: "Hizmet kaliteniz nasıl?",
+    answer: "Modern ekipmanlarımız ve deneyimli personelimizle kaliteli hizmet sunuyoruz."
   },
   {
     question: "Acil durumlar için hizmetiniz var mı?",
@@ -96,8 +96,8 @@ const processSteps = [
   },
   {
     step: "4",
-    title: "Kontrol ve Garanti",
-    description: "Sistemin çalıştığını kontrol edip 6 ay garanti veriyoruz."
+    title: "Kontrol ve Kalite",
+    description: "Sistemin çalıştığını kontrol edip kalite kontrol yapıyoruz."
   }
 ];
 

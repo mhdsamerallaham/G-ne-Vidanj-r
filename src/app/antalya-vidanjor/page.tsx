@@ -7,7 +7,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return generateServicePageMetadata("antalya-vidanjor", {
     title: "Antalya Vidanjör Hizmeti - 7/24 Acil Müdahale",
     description:
-      "Antalya'da profesyonel vidanjör hizmeti. Tıkalı kanalizasyon, logar temizleme, foseptik boşaltma için 30 dakikada müdahale. Uygun fiyat, garantili çözüm.",
+      "Antalya'da profesyonel vidanjör hizmeti. Tıkalı kanalizasyon, logar temizleme, foseptik boşaltma için 30 dakikada müdahale. Uygun fiyat.",
     canonical: "/antalya-vidanjor",
   });
 }
@@ -34,8 +34,8 @@ const faqs = [
     answer: "Evet, son teknoloji vidanjör araçlarımızla kamera sistemleri ve basınçlı su ekipmanları kullanıyoruz."
   },
   {
-    question: "Garanti veriyor musunuz?",
-    answer: "Yaptığımız tüm vidanjör işlerine 1 yıl mekanik garanti veriyoruz."
+    question: "Hizmet kaliteniz nasıl?",
+    answer: "Modern vidanjör araçlarımızla kamera sistemleri ve basınçlı su ekipmanları kullanıyoruz."
   }
 ];
 
@@ -54,14 +54,13 @@ const jsonLd = {
 
 export default function AntalyaVidanjor() {
   const districts = [
-    "Kepez", "Muratpaşa", "Konyaaltı", "Döşemealtı", "Aksu", 
-    "Manavgat", "Alanya", "Kemer", "Serik", "Demre", "Kaş", "Kumluca"
+    "Kepez", "Muratpaşa", "Konyaaltı", "Döşemealtı", "Aksu",
+    "Kemer", "Serik", "Demre", "Kaş", "Kumluca"
   ];
 
   const services = [
     "Tıkalı kanalizasyon açma",
     "Logar temizleme",
-    "Foseptik çukuru boşaltma",
     "Yağ tutucu temizliği",
     "Apartman giderleri",
     "Site tesisat temizliği"
@@ -86,7 +85,7 @@ export default function AntalyaVidanjor() {
                 </h1>
                 <p className="text-xl text-gray-600 leading-relaxed">
                   Tıkalı kanalizasyon ve logar sorunlarınız için Antalya'nın en hızlı vidanjör hizmeti. 
-                  30 dakikada müdahale, uygun fiyat garantisi.
+                  30 dakikada müdahale, uygun fiyat.
                 </p>
               </div>
 
@@ -166,8 +165,8 @@ export default function AntalyaVidanjor() {
                   <div className="flex items-start space-x-3">
                     <Shield className="h-6 w-6 text-orange-600 mt-1 flex-shrink-0" />
                     <div>
-                      <h4 className="font-semibold text-gray-900">1 Yıl Garanti</h4>
-                      <p className="text-gray-600">Yaptığımız tüm işlere mekanik garanti veriyoruz.</p>
+                      <h4 className="font-semibold text-gray-900">Hizmet Kalitemiz</h4>
+                      <p className="text-gray-600">Modern ekipmanlarımız ve deneyimli personelimizle kaliteli hizmet sunuyoruz.</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">

@@ -16,11 +16,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "/antalya-kanalizasyon-acma",
     "/antalya-logar-temizleme",
     "/antalya-yag-tutucu-temizleme",
-    "/antalya-foseptik-bosaltma",
     "/ilceler/kepez",
     "/ilceler/muratpasa",
     "/ilceler/konyaalti",
-    "/ilceler/alanya",
   ];
 
   // Fetch dynamic content with error handling
@@ -72,7 +70,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }));
 
   // Filter out districts that are already static
-  const staticDistricts = ["kepez", "muratpasa", "konyaalti", "alanya"];
+  const staticDistricts = ["kepez", "muratpasa", "konyaalti", "alanya", "manavgat"];
   const districtEntries: MetadataRoute.Sitemap = districtPages
     .filter((page) => !staticDistricts.includes(page.district))
     .map((page) => ({

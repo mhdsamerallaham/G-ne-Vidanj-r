@@ -7,7 +7,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return generateServicePageMetadata("antalya-kanalizasyon-acma", {
     title: "Antalya Kanalizasyon Açma - Basınçlı Su ile 30 Dakikada",
     description:
-      "Antalya'da profesyonel kanalizasyon açma hizmeti. Basınçlı su, kamera tespit, ana hatlar. 30 dakikada müdahale, uygun fiyat, garantili çözüm.",
+      "Antalya'da profesyonel kanalizasyon açma hizmeti. Basınçlı su, kamera tespit, ana hatlar. 30 dakikada müdahale, uygun fiyat.",
     canonical: "/antalya-kanalizasyon-acma",
   });
 }
@@ -34,8 +34,8 @@ const faqs = [
     answer: "Evet, taşan kanalizasyonlar için 7/24 acil müdahale hizmetimiz bulunmaktadır."
   },
   {
-    question: "Garanti veriyor musunuz?",
-    answer: "Evet, yaptığımız tüm kanalizasyon açma işlemlerine 1 yıl mekanik garanti veriyoruz."
+    question: "Hizmet kaliteniz nasıl?",
+    answer: "Modern ekipmanlarımız ve deneyimli personelimizle kaliteli hizmet sunuyoruz."
   }
 ];
 

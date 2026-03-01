@@ -16,12 +16,12 @@ export function generateMetadata({
   const siteName = "Güneş Vidanjör";
   const baseUrl = "https://gunesvidanjor.com";
   const defaultTitle = "Antalya Vidanjör Hizmeti - 7/24 Acil Müdahale | Güneş Vidanjör";
-  const defaultDescription = "Antalya'da vidanjör, tıkalı gider açma, foseptik boşaltma, kanalizasyon temizleme hizmetleri. 7/24 acil müdahale, uygun fiyat, garantili çözüm.";
+  const defaultDescription = "Antalya'da vidanjör, tıkalı gider açma ve kanalizasyon temizleme hizmetleri. 7/24 acil müdahale, uygun fiyat."
 
   const finalTitle = title ? `${title} | ${siteName}` : defaultTitle;
   const finalDescription = description || defaultDescription;
   const finalCanonical = canonical ? `${baseUrl}${canonical}` : baseUrl;
-  const finalImage = image || `${baseUrl}/vercel.svg`;
+  const finalImage = image || `${baseUrl}/logo.png`;
 
   return {
     title: finalTitle,
@@ -100,7 +100,7 @@ export function generateLocalBusinessSchema() {
     },
     "areaServed": "Antalya",
     "openingHours": "Mo-Su 00:00-23:59",
-    "serviceType": ["Vidanjör Hizmeti", "Kanal Açma", "Logar Temizleme", "Foseptik Boşaltma"]
+    "serviceType": ["Vidanjör Hizmeti", "Kanal Açma", "Logar Temizleme"]
   };
 }
 

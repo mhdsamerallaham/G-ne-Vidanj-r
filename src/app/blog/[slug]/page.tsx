@@ -163,7 +163,6 @@ export default async function BlogPostPage({ params }: Props) {
                 {[
                   { title: "Kanal Açma", href: "/hizmetlerimiz/kanal-acma" },
                   { title: "Logar Temizleme", href: "/hizmetlerimiz/logar-temizleme" },
-                  { title: "Foseptik Çekimi", href: "/hizmetlerimiz/foseptik-cekimi" },
                   { title: "Yağ Tutucu Temizliği", href: "/hizmetlerimiz/yag-tutucu-temizleme" },
                   { title: "Vidanjör Kiralama", href: "/hizmetlerimiz/vidanjor-kiralama" },
                 ].map((item) => (

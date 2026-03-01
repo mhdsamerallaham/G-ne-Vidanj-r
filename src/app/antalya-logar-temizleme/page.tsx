@@ -34,8 +34,8 @@ const faqs = [
     answer: "Evet, taşan logarlar için 7/24 acil müdahale hizmetimiz bulunmaktadır."
   },
   {
-    question: "Garanti veriyor musunuz?",
-    answer: "Evet, yaptığımız tüm logar temizleme işlemlerine 6 ay mekanik garanti veriyoruz."
+    question: "Hizmet kaliteniz nasıl?",
+    answer: "Modern ekipmanlarımız ve deneyimli personelimizle kaliteli hizmet sunuyoruz."
   }
 ];
 
@@ -319,8 +319,8 @@ export default function AntalyaLogarTemizleme() {
                 <div className="flex items-start space-x-4">
                   <div className="bg-green-600 text-white w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 font-bold">4</div>
                   <div>
-                    <h4 className="font-semibold text-gray-900">Kontrol ve Garanti</h4>
-                    <p className="text-gray-600 text-sm">Son kontrol ve 6 ay garanti</p>
+                    <h4 className="font-semibold text-gray-900">Kontrol ve Kalite</h4>
+                    <p className="text-gray-600 text-sm">Son kontrol ve kalite kontrol</p>
                   </div>
                 </div>
               </div>

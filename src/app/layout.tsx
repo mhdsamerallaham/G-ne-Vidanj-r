@@ -26,7 +26,7 @@ export async function generateMetadata(): Promise<Metadata> {
     ...baseGenerateMetadata({
       title: "Antalya Vidanjör Hizmeti - 7/24 Acil Müdahale",
       description:
-        "Antalya'da vidanjör, tıkalı gider açma, foseptik boşaltma, kanalizasyon temizleme hizmetleri. 7/24 acil müdahale, uygun fiyat, garantili çözüm.",
+        "Antalya'da vidanjör, tıkalı gider açma ve kanalizasyon temizleme hizmetleri. 7/24 acil müdahale, uygun fiyat.",
     }),
     verification: {
       google: settings?.googleVerification || undefined,

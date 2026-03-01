@@ -55,20 +55,8 @@ export default async function Home() {
       features: [
         "Kameralı tespit",
         "Kimyasal kullanmadan çözüm",
-        "Garantili hizmet",
+        "Kaliteli hizmet",
         "Uygun fiyat",
-      ],
-    },
-    {
-      title: "Foseptik Boşaltma",
-      description: "Foseptik çukuru temizleme ve boşaltma",
-      href: "/antalya-foseptik-bosaltma",
-      icon: <Wrench className="h-6 w-6 text-orange-600" />,
-      features: [
-        "Periyodik bakım",
-        "Çevre dostu yöntem",
-        "Hızlı boşaltma",
-        "Büyük kapasite",
       ],
     },
     {
@@ -123,8 +111,6 @@ export default async function Home() {
     { name: "Konyaaltı", href: "/ilceler/konyaalti", time: "25 dk" },
     { name: "Döşemealtı", href: "/ilceler/dosemealti", time: "35 dk" },
     { name: "Aksu", href: "/ilceler/aksu", time: "30 dk" },
-    { name: "Manavgat", href: "/ilceler/manavgat", time: "60 dk" },
-    { name: "Alanya", href: "/ilceler/alanya", time: "90 dk" },
     { name: "Kemer", href: "/ilceler/kemer", time: "45 dk" },
     { name: "Serik", href: "/ilceler/serik", time: "40 dk" },
   ];
@@ -145,8 +131,8 @@ export default async function Home() {
     {
       icon: <Award className="h-7 w-7 text-green-600" />,
       bg: "bg-green-100",
-      title: "1 Yıl Garanti",
-      desc: "Tüm işlerimize 1 yıl mekanik garanti. Sorun tekrarlarsa ücretsiz müdahale.",
+      title: "Hizmet Kalitemiz",
+      desc: "Modern ekipmanlarımız ve deneyimli personelimizle kaliteli hizmet sunuyoruz.",
     },
     {
       icon: <ThumbsUp className="h-7 w-7 text-purple-600" />,
@@ -227,7 +213,7 @@ export default async function Home() {
               Hizmet <span className="text-orange-600">Alanlarımız</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Antalya&apos;da vidanjör, tıkalı gider açma, foseptik boşaltma ve daha birçok hizmet
+              Antalya&apos;da vidanjör, tıkalı gider açma ve daha birçok hizmet
               için uzman ekibimizle 7/24 hizmetinizdeyiz.
             </p>
           </div>
@@ -354,8 +340,8 @@ export default async function Home() {
               },
               {
                 step: "04",
-                title: "Garanti",
-                desc: "1 yıl garanti ile işimizi teslim ediyoruz",
+                title: "Kalite Kontrol",
+                desc: "İşimizi kalite kontrol ile teslim ediyoruz",
                 icon: <Award className="h-6 w-6 text-white" />,
               },
             ].map((item, i) => (

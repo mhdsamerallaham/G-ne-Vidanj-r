@@ -7,7 +7,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return generateDistrictPageMetadata("konyaalti", {
     title: "Konyaaltı Vidanjör Hizmeti - Sahil Bölgesi 25 Dakikada",
     description:
-      "Konyaaltı'da vidanjör, tıkalı gider açma, foseptik boşaltma hizmetleri. 25 dakikada müdahale, uygun fiyat, garantili çözüm. Liman, Çaltı, Arapsuyu ve tüm Konyaaltı mahalleleri.",
+      "Konyaaltı'da vidanjör ve tıkalı gider açma hizmetleri. 25 dakikada müdahale, uygun fiyat. Liman, Çaltı, Arapsuyu ve tüm Konyaaltı mahalleleri.",
     canonical: "/ilceler/konyaalti",
   });
 }
@@ -36,7 +36,7 @@ const jsonLd = {
   "@graph": [
     generateServiceSchema(
       "Konyaaltı Vidanjör Hizmeti",
-      "Konyaaltı'da vidanjör, tıkalı gider açma, foseptik boşaltma hizmetleri. 25 dakikada müdahale.",
+      "Konyaaltı'da vidanjör ve tıkalı gider açma hizmetleri. 25 dakikada müdahale.",
       "+90 533 581 79 36"
     ),
     generateFAQSchema(faqs)
@@ -79,7 +79,7 @@ export default function KonyaaltiVidanjor() {
                   <span className="text-blue-600"> Hizmeti</span>
                 </h1>
                 <p className="text-xl text-gray-600 leading-relaxed">
-                  Konyaaltı'nın tüm mahallelerine vidanjör, tıkalı gider açma ve foseptik hizmetleri. 
+                  Konyaaltı'nın tüm mahallelerine vidanjör ve tıkalı gider açma hizmetleri. 
                   20-40 dakikada müdahale, sahil bölgesi özel hizmet.
                 </p>
               </div>
