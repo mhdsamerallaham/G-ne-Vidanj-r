@@ -1,5 +1,6 @@
 import { prisma } from "@/lib/db";
 import type { MetadataRoute } from "next";
+import { safeDatabaseQuery } from "@/lib/database-utils";
 
 const baseUrl = "https://gunesvidanjor.com";
 
@@ -36,29 +37,34 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   ];
 
   // Fetch dynamic content with error handling
-  let blogPosts: any[] = [];
-  let servicePages: any[] = [];
-  let districtPages: any[] = [];
+  const blogPosts = await safeDatabaseQuery(
+    () => prisma.blogPost.findMany({
+      where: { published: true },
+      select: { slug: true, updatedAt: true },
+    }),
+    []
+  );
 
-  try {
-    [blogPosts, servicePages, districtPages] = await Promise.all([
-      prisma.blogPost.findMany({
-        where: { published: true },
-        select: { slug: true, updatedAt: true },
-      }),
-      prisma.servicePage.findMany({
-        where: { published: true },
-        select: { slug: true, updatedAt: true },
-      }),
-      prisma.districtPage.findMany({
-        where: { published: true },
-        select: { district: true, updatedAt: true },
-      }),
-    ]);
-  } catch (error) {
-    console.error("Error fetching dynamic content for sitemap:", error);
-    // Continue with empty arrays if database is not available
-  }
+  const servicePages = await safeDatabaseQuery(
+    () => prisma.servicePage.findMany({
+      where: { published: true },
+      select: { slug: true, updatedAt: true },
+    }),
+    []
+  );
+
+  const districtPages = await safeDatabaseQuery(
+    () => prisma.districtPage.findMany({
+      where: { published: true },
+      select: { district: true, updatedAt: true },
+    }),
+    []
+  );
+
+  // Ensure arrays are never null
+  const blogs = blogPosts || [];
+  const services = servicePages || [];
+  const districts = districtPages || [];
 
   const staticEntries: MetadataRoute.Sitemap = staticRoutes.map((route) => ({
     url: `${baseUrl}${route}`,
@@ -67,32 +73,26 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: route === "" ? 1 : 0.8,
   }));
 
-  const blogEntries: MetadataRoute.Sitemap = blogPosts.map((post) => ({
+  const blogEntries: MetadataRoute.Sitemap = blogs.map((post) => ({
     url: `${baseUrl}/blog/${post.slug}`,
     lastModified: post.updatedAt,
+    changeFrequency: "weekly",
+    priority: 0.7,
+  }));
+
+  const serviceEntries: MetadataRoute.Sitemap = services.map((service) => ({
+    url: `${baseUrl}/hizmetler/${service.slug}`,
+    lastModified: service.updatedAt,
     changeFrequency: "monthly",
     priority: 0.6,
   }));
 
-  // Filter out services that might conflict with static routes (if any)
-  // For now, we assume service pages are under /hizmetler/[slug] which doesn't conflict with root static pages
-  const serviceEntries: MetadataRoute.Sitemap = servicePages.map((page) => ({
-    url: `${baseUrl}/hizmetler/${page.slug}`,
-    lastModified: page.updatedAt,
-    changeFrequency: "weekly",
-    priority: 0.8,
+  const districtEntries: MetadataRoute.Sitemap = districts.map((district) => ({
+    url: `${baseUrl}/ilceler/${district.district}`,
+    lastModified: district.updatedAt,
+    changeFrequency: "monthly",
+    priority: 0.6,
   }));
-
-  // Filter out districts that are already static
-  const staticDistricts = ["kepez", "muratpasa", "konyaalti", "akseki", "aksu", "demre", "doser", "elbeyli", "finike", "gazipasa", "gundogmus", "ibradi", "kale", "kas", "kemer", "kumluca", "serik"];
-  const districtEntries: MetadataRoute.Sitemap = districtPages
-    .filter((page) => !staticDistricts.includes(page.district))
-    .map((page) => ({
-      url: `${baseUrl}/ilceler/${page.district}`,
-      lastModified: page.updatedAt,
-      changeFrequency: "weekly",
-      priority: 0.8,
-    }));
 
   return [...staticEntries, ...blogEntries, ...serviceEntries, ...districtEntries];
 }

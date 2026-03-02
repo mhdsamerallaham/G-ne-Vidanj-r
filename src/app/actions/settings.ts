@@ -2,15 +2,13 @@
 
 import { prisma } from "@/lib/db";
 import { revalidatePath } from "next/cache";
+import { safeDatabaseQuery } from "@/lib/database-utils";
 
 export async function getSettings() {
-  try {
-    const settings = await prisma.siteSettings.findFirst();
-    return settings;
-  } catch (error) {
-    console.error("Error fetching settings:", error);
-    return null;
-  }
+  return await safeDatabaseQuery(
+    () => prisma.siteSettings.findFirst(),
+    null
+  );
 }
 
 export async function updateSettings(prevState: any, formData: FormData) {

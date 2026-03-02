@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Calendar, Clock, ArrowRight, User } from "lucide-react";
 import { prisma } from "@/lib/db";
 import { BlogPost } from "@prisma/client";
+import { safeDatabaseQuery } from "@/lib/database-utils";
 
 export const metadata: Metadata = generateMetadata({
   title: "Tıkanıklık Açma Blog - Antalya Kanal Temizleme Rehberi",
@@ -31,15 +32,16 @@ function getReadTime(content: string) {
 export const dynamic = 'force-dynamic';
 
 export default async function BlogPage() {
-  let blogPosts: BlogPost[] = [];
-  try {
-    blogPosts = await prisma.blogPost.findMany({
+  const blogPosts = await safeDatabaseQuery(
+    () => prisma.blogPost.findMany({
       where: { published: true },
       orderBy: { createdAt: 'desc' },
-    });
-  } catch (error) {
-    console.error("Blog posts fetch error:", error);
-  }
+    }),
+    []
+  );
+
+  // Ensure blogPosts is never null
+  const posts = blogPosts || [];
 
   return (
     <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
@@ -53,75 +55,72 @@ export default async function BlogPage() {
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {blogPosts.map((post) => (
-            <article
-              key={post.slug}
-              className="flex flex-col bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
-            >
-              <div className="relative h-48 w-full overflow-hidden bg-gray-200">
-                {post.image ? (
-                  <img
-                    src={post.image}
-                    alt={post.title}
-                    className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
-                  />
-                ) : (
-                  <div className="w-full h-full flex items-center justify-center text-gray-400">
-                    <span className="text-4xl font-bold opacity-20">BLOG</span>
-                  </div>
-                )}
-                <div className="absolute top-4 right-4 bg-orange-600 text-white text-xs font-bold px-3 py-1 rounded-full">
-                  Blog
-                </div>
-              </div>
-              
-              <div className="flex-1 p-6 flex flex-col">
-                <div className="flex items-center text-sm text-gray-500 mb-4 space-x-4">
-                  <div className="flex items-center">
-                    <Calendar className="h-4 w-4 mr-1 text-orange-600" />
-                    <time dateTime={post.createdAt.toISOString()}>
-                      {formatDate(post.createdAt)}
-                    </time>
-                  </div>
-                  <div className="flex items-center">
-                    <Clock className="h-4 w-4 mr-1 text-orange-600" />
-                    <span>{getReadTime(post.content)}</span>
-                  </div>
-                </div>
-
-                <h2 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2 hover:text-orange-600 transition-colors">
-                  <Link href={`/blog/${post.slug}`}>
-                    {post.title}
-                  </Link>
-                </h2>
-
-                <p className="text-gray-600 mb-6 line-clamp-3 flex-1">
-                  {post.excerpt}
-                </p>
-
-                <div className="flex items-center justify-between mt-auto pt-4 border-t border-gray-100">
-                  <div className="flex items-center text-sm text-gray-600">
-                    <User className="h-4 w-4 mr-2 text-gray-400" />
-                    <span>Güneş Tıkanıklık</span>
-                  </div>
-                  <Link
-                    href={`/blog/${post.slug}`}
-                    className="inline-flex items-center text-orange-600 hover:text-orange-700 font-medium transition-colors"
-                  >
-                    Devamını Oku
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </div>
-              </div>
-            </article>
-          ))}
-        </div>
-
-        {blogPosts.length === 0 && (
+        {posts.length === 0 ? (
           <div className="text-center py-12 bg-white rounded-lg shadow-sm">
             <p className="text-gray-500 text-lg">Henüz yayınlanmış blog yazısı bulunmamaktadır.</p>
             <p className="text-gray-400 text-sm mt-2">Daha sonra tekrar kontrol ediniz.</p>
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {posts.map((post) => (
+              <article key={post.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <div className="relative h-48 bg-gradient-to-br from-orange-50 to-orange-100">
+                  {post.image ? (
+                    <img
+                      src={post.image}
+                      alt={post.title}
+                      className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
+                    />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center text-gray-400">
+                      <span className="text-4xl font-bold opacity-20">BLOG</span>
+                    </div>
+                  )}
+                  <div className="absolute top-4 right-4 bg-orange-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+                    Blog
+                  </div>
+                </div>
+                
+                <div className="flex-1 p-6 flex flex-col">
+                  <div className="flex items-center text-sm text-gray-500 mb-4 space-x-4">
+                    <div className="flex items-center">
+                      <Calendar className="h-4 w-4 mr-1 text-orange-600" />
+                      <time dateTime={post.createdAt.toISOString()}>
+                        {formatDate(post.createdAt)}
+                      </time>
+                    </div>
+                    <div className="flex items-center">
+                      <Clock className="h-4 w-4 mr-1 text-orange-600" />
+                      <span>{getReadTime(post.content)}</span>
+                    </div>
+                  </div>
+
+                  <h2 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2 hover:text-orange-600 transition-colors">
+                    <Link href={`/blog/${post.slug}`}>
+                      {post.title}
+                    </Link>
+                  </h2>
+
+                  <p className="text-gray-600 mb-6 line-clamp-3 flex-1">
+                    {post.excerpt}
+                  </p>
+
+                  <div className="flex items-center justify-between mt-auto pt-4 border-t border-gray-100">
+                    <div className="flex items-center text-sm text-gray-600">
+                      <User className="h-4 w-4 mr-2 text-gray-400" />
+                      <span>Güneş Tıkanıklık</span>
+                    </div>
+                    <Link
+                      href={`/blog/${post.slug}`}
+                      className="inline-flex items-center text-orange-600 hover:text-orange-700 font-medium transition-colors"
+                    >
+                      Devamını Oku
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </div>
+                </div>
+              </article>
+            ))}
           </div>
         )}
       </div>

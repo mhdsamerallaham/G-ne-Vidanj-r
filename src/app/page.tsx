@@ -5,6 +5,7 @@ import FAQSection from "@/components/FAQ";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import Link from "next/link";
 import { prisma } from "@/lib/db";
+import { safeDatabaseQuery } from "@/lib/database-utils";
 import {
   Truck,
   Droplets,
@@ -24,14 +25,17 @@ import {
 } from "lucide-react";
 
 export default async function Home() {
-  const recentPosts = await prisma.blogPost.findMany({
-    where: { published: true },
-    orderBy: { createdAt: 'desc' },
-    take: 3,
-  }).catch((e) => {
-    console.error(e);
-    return [];
-  });
+  const recentPosts = await safeDatabaseQuery(
+    () => prisma.blogPost.findMany({
+      where: { published: true },
+      orderBy: { createdAt: 'desc' },
+      take: 3,
+    }),
+    []
+  );
+
+  // Ensure recentPosts is never null
+  const posts = recentPosts || [];
 
   const services = [
     {
@@ -361,19 +365,19 @@ export default async function Home() {
       </section>
 
       {/* Blog Section */}
-      {recentPosts.length > 0 && (
+      {posts.length > 0 && (
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <span className="inline-block bg-orange-100 text-orange-600 rounded-full px-4 py-1 text-sm font-semibold">
-                Blog
-              </span>
-              <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl mt-4">
-                Son Eklenen <span className="text-orange-600">Yazılar</span>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                Son <span className="text-orange-600">Blog Yazıları</span>
               </h2>
+              <p className="text-xl text-gray-600">
+                Tıkanıklık açma ve kanal temizleme hakkında uzman tavsiyeleri
+              </p>
             </div>
             <div className="grid gap-8 md:grid-cols-3">
-              {recentPosts.map((post) => (
+              {posts.map((post) => (
                 <div key={post.slug} className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow flex flex-col h-full">
                   {post.image ? (
                     <img src={post.image} alt={post.title} className="h-48 w-full object-cover" />

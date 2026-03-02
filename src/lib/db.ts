@@ -19,6 +19,11 @@ const createPrismaClient = () => {
       },
     },
     log: process.env.NODE_ENV === 'development' ? ['query', 'error', 'warn'] : ['error'],
+    errorFormat: 'pretty',
+    transactionOptions: {
+      timeout: 10000,
+      isolationLevel: 'ReadCommitted',
+    },
   });
 };
 
