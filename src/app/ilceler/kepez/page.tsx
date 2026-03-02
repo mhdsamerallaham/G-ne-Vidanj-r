@@ -5,7 +5,7 @@ import { MapPin, Clock, Phone, CheckCircle, Truck, AlertTriangle } from "lucide-
 
 export async function generateMetadata(): Promise<Metadata> {
   return generateDistrictPageMetadata("kepez", {
-    title: "Kepez Vidanjör Hizmeti - 30 Dakikada Müdahale",
+    title: "Kepez Tıkanıklık Açma Hizmeti - 30 Dakikada Müdahale",
     description: "Kepez'de vidanjör, tıkalı gider açma hizmetleri. 30 dakikada müdahale, uygun fiyat. Çağlayan, Varsak, Kütükçü ve tüm Kepez mahalleleri.",
     canonical: "/ilceler/kepez",
   });
@@ -34,7 +34,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     generateServiceSchema(
-      "Kepez Vidanjör Hizmeti",
+      "Kepez Tıkanıklık Açma Hizmeti",
       "Kepez'de vidanjör, tıkalı gider açma hizmetleri. 30 dakikada müdahale.",
       "+90 533 581 79 36"
     ),
@@ -75,7 +75,7 @@ export default function KepezVidanjor() {
                   <span>Kepez Özel Hizmet</span>
                 </div>
                 <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                  Kepez Vidanjör
+                  Kepez Tıkanıklık Açma
                   <span className="text-orange-600"> Hizmeti</span>
                 </h1>
                 <p className="text-xl text-gray-600 leading-relaxed">
@@ -190,7 +190,7 @@ export default function KepezVidanjor() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-4 mb-12">
             <h2 className="text-3xl font-bold text-gray-900">
-              Kepez'de <span className="text-orange-600">Vidanjör Hizmetlerimiz</span>
+              Kepez'de <span className="text-orange-600">Tıkanıklık Açma Hizmetlerimiz</span>
             </h2>
             <p className="text-xl text-gray-600">
               Tüm vidanjör ve kanal temizleme ihtiyaçlarınız için profesyonel çözümler
@@ -202,7 +202,7 @@ export default function KepezVidanjor() {
               <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
                 <Truck className="h-8 w-8 text-orange-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Vidanjör Hizmeti</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Tıkanıklık Açma Hizmeti</h3>
               <p className="text-gray-600 mb-4">
                 Kepez'de tıkalı kanalizasyon ve logar temizliği için modern vidanjör araçları.
               </p>
@@ -247,7 +247,7 @@ export default function KepezVidanjor() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-4 mb-12">
             <h2 className="text-3xl font-bold text-gray-900">
-              Kepez Vidanjör <span className="text-orange-600">SSS</span>
+              Kepez Tıkanıklık Açma <span className="text-orange-600">SSS</span>
             </h2>
             <p className="text-xl text-gray-600">
               Kepez'de vidanjör hizmetleri hakkında merak edilenler

@@ -5,7 +5,7 @@ import { Truck, Clock, MapPin, Phone, CheckCircle, Shield, AlertTriangle } from 
 
 export async function generateMetadata(): Promise<Metadata> {
   return generateServicePageMetadata("antalya-vidanjor", {
-    title: "Antalya Vidanjör Hizmeti - 7/24 Acil Müdahale",
+    title: "Antalya Tıkanıklık Açma Hizmeti - 7/24 Acil Müdahale",
     description:
       "Antalya'da profesyonel vidanjör hizmeti. Tıkalı kanalizasyon, logar temizleme, foseptik boşaltma için 30 dakikada müdahale. Uygun fiyat.",
     canonical: "/antalya-vidanjor",
@@ -14,11 +14,11 @@ export async function generateMetadata(): Promise<Metadata> {
 
 const faqs = [
   {
-    question: "Vidanjör hizmeti ne kadar sürer?",
+    question: "Tıkanıklık Açma hizmeti ne kadar sürer?",
     answer: "Antalya merkezinde 30 dakika içinde müdahale ediyoruz. İlçelere göre bu süre 30-60 dakika arasında değişebilir."
   },
   {
-    question: "Vidanjör fiyatları nasıl belirleniyor?",
+    question: "Tıkanıklık Açma fiyatları nasıl belirleniyor?",
     answer: "Fiyatlar mesafeye, işin zorluk derecesine ve kullanılacak ekipmana göre belirlenir. Ücretsiz keşif hizmetimiz vardır."
   },
   {
@@ -30,7 +30,7 @@ const faqs = [
     answer: "Evet, 7/24 acil vidanjör hizmetimiz bulunmaktadır. Gece, hafta sonu veya tatil günü fark etmeksizin hizmetinizdeyiz."
   },
   {
-    question: "Vidanjör araçlarınız modern mi?",
+    question: "Tıkanıklık Açma araçlarınız modern mi?",
     answer: "Evet, son teknoloji vidanjör araçlarımızla kamera sistemleri ve basınçlı su ekipmanları kullanıyoruz."
   },
   {
@@ -43,7 +43,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     generateServiceSchema(
-      "Antalya Vidanjör Hizmeti",
+      "Antalya Tıkanıklık Açma Hizmeti",
       "Antalya'da profesyonel vidanjör hizmeti. Tıkalı kanalizasyon, logar temizleme, foseptik boşaltma için 30 dakikada müdahale.",
       "+90 533 581 79 36"
     ),
@@ -80,7 +80,7 @@ export default function AntalyaVidanjor() {
             <div className="space-y-8">
               <div className="space-y-4">
                 <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                  Antalya Vidanjör
+                  Antalya Tıkanıklık Açma
                   <span className="text-orange-600"> Hizmeti</span>
                 </h1>
                 <p className="text-xl text-gray-600 leading-relaxed">
@@ -124,7 +124,7 @@ export default function AntalyaVidanjor() {
             <div className="bg-white rounded-2xl shadow-2xl p-8">
               <div className="text-center space-y-6">
                 <Truck className="h-24 w-24 text-orange-600 mx-auto" />
-                <h3 className="text-2xl font-bold text-gray-900">Acil Vidanjör Hizmeti</h3>
+                <h3 className="text-2xl font-bold text-gray-900">Acil Tıkanıklık Açma Hizmeti</h3>
                 <p className="text-gray-600">Antalya'nın tüm ilçelerine anında müdahale!</p>
                 <a
                   href="tel:+905335817936"
@@ -145,7 +145,7 @@ export default function AntalyaVidanjor() {
             <div className="space-y-8">
               <div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                  Vidanjör Hizmetlerimiz
+                  Tıkanıklık Açma Hizmetlerimiz
                 </h2>
                 <div className="space-y-4">
                   {services.map((service, index) => (
@@ -159,7 +159,7 @@ export default function AntalyaVidanjor() {
 
               <div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  Neden Güneş Vidanjör?
+                  Neden Güneş Tıkanıklık?
                 </h3>
                 <div className="space-y-4">
                   <div className="flex items-start space-x-3">
@@ -207,7 +207,7 @@ export default function AntalyaVidanjor() {
                   Hızlı Teklif Al
                 </h3>
                 <p className="text-gray-600 mb-6">
-                  Vidanjör hizmetiniz için hemen teklif almak için bize ulaşın.
+                  Tıkanıklık Açma hizmetiniz için hemen teklif almak için bize ulaşın.
                 </p>
                 <div className="space-y-4">
                   <a
@@ -238,7 +238,7 @@ export default function AntalyaVidanjor() {
               Sıkça Sorulan <span className="text-orange-600">Sorular</span>
             </h2>
             <p className="text-xl text-gray-600">
-              Vidanjör hizmetleri hakkında merak edilenler
+              Tıkanıklık Açma hizmetleri hakkında merak edilenler
             </p>
           </div>
 

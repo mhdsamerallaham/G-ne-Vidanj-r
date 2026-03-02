@@ -82,7 +82,7 @@ export default function BlogForm({ post }: BlogFormProps) {
               id="title"
               defaultValue={post?.title}
               className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500 sm:text-sm p-2 border"
-              placeholder="Örn: Vidanjör Hizmetleri Hakkında Bilmeniz Gerekenler"
+              placeholder="Örn: Tıkanıklık Açma Hizmetleri Hakkında Bilmeniz Gerekenler"
             />
             {state.errors?.title && (
               <p className="mt-1 text-sm text-red-600">{state.errors.title[0]}</p>

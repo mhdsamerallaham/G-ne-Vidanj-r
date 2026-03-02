@@ -4,7 +4,7 @@ import { Metadata } from "next";
 import { ArrowRight, Truck } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Tüm Hizmetlerimiz - Güneş Vidanjör Antalya",
+  title: "Tüm Hizmetlerimiz - Güneş Tıkanıklık Antalya",
   description: "Antalya'da sunduğumuz tüm vidanjör ve altyapı hizmetleri. Tıkalı gider açma, logar temizleme ve daha fazlası.",
 };
 
@@ -12,7 +12,7 @@ export default async function ServicesIndexPage() {
   // Static services
   const staticServices = [
     {
-      title: "Vidanjör Hizmeti",
+      title: "Tıkanıklık Açma Hizmeti",
       description: "Tıkalı kanalizasyon ve logar temizliği",
       href: "/antalya-vidanjor",
     },

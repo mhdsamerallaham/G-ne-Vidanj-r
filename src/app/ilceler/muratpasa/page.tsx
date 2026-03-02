@@ -5,7 +5,7 @@ import { MapPin, Clock, Phone, CheckCircle, Truck, AlertTriangle, Building } fro
 
 export async function generateMetadata(): Promise<Metadata> {
   return generateDistrictPageMetadata("muratpasa", {
-    title: "Muratpaşa Vidanjör Hizmeti - 20 Dakikada Müdahale",
+    title: "Muratpaşa Tıkanıklık Açma Hizmeti - 20 Dakikada Müdahale",
     description:
       "Muratpaşa'da vidanjör ve tıkalı gider açma hizmetleri. 20 dakikada müdahale, uygun fiyat. Konyaaltı, Lara, Yenişehir ve tüm Muratpaşa mahalleleri.",
     canonical: "/ilceler/muratpasa",
@@ -35,7 +35,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     generateServiceSchema(
-      "Muratpaşa Vidanjör Hizmeti",
+      "Muratpaşa Tıkanıklık Açma Hizmeti",
       "Muratpaşa'da vidanjör ve tıkalı gider açma hizmetleri. 20 dakikada müdahale.",
       "+90 533 581 79 36"
     ),
@@ -77,7 +77,7 @@ export default function MuratpasaVidanjor() {
                   <span>Muratpaşa Özel Hizmet</span>
                 </div>
                 <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                  Muratpaşa Vidanjör
+                  Muratpaşa Tıkanıklık Açma
                   <span className="text-blue-600"> Hizmeti</span>
                 </h1>
                 <p className="text-xl text-gray-600 leading-relaxed">
@@ -192,7 +192,7 @@ export default function MuratpasaVidanjor() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center space-y-4 mb-12">
                 <h2 className="text-3xl font-bold text-gray-900">
-                  Ticari <span className="text-blue-600">Vidanjör Hizmetleri</span>
+                  Ticari <span className="text-blue-600">Tıkanıklık Açma Hizmetleri</span>
                 </h2>
                 <p className="text-xl text-gray-600">
                   Muratpaşa'daki oteller, restoranlar ve iş yerleri için özel çözümler
@@ -268,7 +268,7 @@ export default function MuratpasaVidanjor() {
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center space-y-4 mb-12">
                 <h2 className="text-3xl font-bold text-gray-900">
-                  Muratpaşa Vidanjör <span className="text-blue-600">SSS</span>
+                  Muratpaşa Tıkanıklık Açma <span className="text-blue-600">SSS</span>
                 </h2>
                 <p className="text-xl text-gray-600">
                   Muratpaşa'da vidanjör hizmetleri hakkında merak edilenler

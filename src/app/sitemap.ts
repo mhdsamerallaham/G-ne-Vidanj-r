@@ -19,6 +19,20 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "/ilceler/kepez",
     "/ilceler/muratpasa",
     "/ilceler/konyaalti",
+    "/ilceler/akseki",
+    "/ilceler/aksu",
+    "/ilceler/demre",
+    "/ilceler/doser",
+    "/ilceler/elbeyli",
+    "/ilceler/finike",
+    "/ilceler/gazipasa",
+    "/ilceler/gundogmus",
+    "/ilceler/ibradi",
+    "/ilceler/kale",
+    "/ilceler/kas",
+    "/ilceler/kemer",
+    "/ilceler/kumluca",
+    "/ilceler/serik",
   ];
 
   // Fetch dynamic content with error handling
@@ -70,7 +84,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }));
 
   // Filter out districts that are already static
-  const staticDistricts = ["kepez", "muratpasa", "konyaalti", "alanya", "manavgat"];
+  const staticDistricts = ["kepez", "muratpasa", "konyaalti", "akseki", "aksu", "demre", "doser", "elbeyli", "finike", "gazipasa", "gundogmus", "ibradi", "kale", "kas", "kemer", "kumluca", "serik"];
   const districtEntries: MetadataRoute.Sitemap = districtPages
     .filter((page) => !staticDistricts.includes(page.district))
     .map((page) => ({

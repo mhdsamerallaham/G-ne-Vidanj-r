@@ -49,7 +49,7 @@ export function TestimonialsSection() {
     {
       name: "Ahmet Yılmaz",
       district: "Kepez",
-      service: "Vidanjör",
+      service: "Tıkanıklık Açma",
       rating: 5,
       content: "Gece yarısı tıkanan logar için aradım, 30 dakika içinde geldiler. Hızlı ve profesyonel hizmet için teşekkür ederim.",
       date: "2 gün önce"

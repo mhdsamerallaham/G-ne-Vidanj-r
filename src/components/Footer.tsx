@@ -3,7 +3,7 @@ import { Phone, MapPin, Clock, Mail } from 'lucide-react';
 
 export default function Footer() {
   const services = [
-    { name: 'Antalya Vidanjör', href: '/antalya-vidanjor' },
+    { name: 'Antalya Tıkanıklık Açma', href: '/antalya-vidanjor' },
     { name: 'Tıkalı Gider Açma', href: '/antalya-tikali-gider-acma' },
     { name: 'Kanalizasyon Açma', href: '/antalya-kanalizasyon-acma' },
     { name: 'Logar Temizleme', href: '/antalya-logar-temizleme' },
@@ -11,11 +11,11 @@ export default function Footer() {
   ];
 
   const districts = [
-    { name: 'Kepez Vidanjör', href: '/ilceler/kepez' },
-    { name: 'Muratpaşa Vidanjör', href: '/ilceler/muratpasa' },
-    { name: 'Konyaaltı Vidanjör', href: '/ilceler/konyaalti' },
-    { name: 'Döşemealtı Vidanjör', href: '/ilceler/dosemealti' },
-    { name: 'Aksu Vidanjör', href: '/ilceler/aksu' },
+    { name: 'Kepez Tıkanıklık Açma', href: '/ilceler/kepez' },
+    { name: 'Muratpaşa Tıkanıklık Açma', href: '/ilceler/muratpasa' },
+    { name: 'Konyaaltı Tıkanıklık Açma', href: '/ilceler/konyaalti' },
+    { name: 'Döşemealtı Tıkanıklık Açma', href: '/ilceler/dosemealti' },
+    { name: 'Aksu Tıkanıklık Açma', href: '/ilceler/aksu' },
   ];
 
   return (
@@ -29,7 +29,7 @@ export default function Footer() {
                 <Phone className="h-6 w-6" />
               </div>
               <div>
-                <h3 className="text-xl font-bold">Güneş Vidanjör</h3>
+                <h3 className="text-xl font-bold">Güneş Tıkanıklık</h3>
                 <p className="text-sm text-gray-400">7/24 Acil Müdahale</p>
               </div>
             </div>
@@ -117,7 +117,7 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-center md:text-left">
               <p className="text-gray-400 text-sm">
-                © 2024 Güneş Vidanjör. Tüm hakları saklıdır.
+                © 2024 Güneş Tıkanıklık. Tüm hakları saklıdır.
               </p>
             </div>
             <div className="flex space-x-6 text-sm">

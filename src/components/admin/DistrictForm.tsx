@@ -99,7 +99,7 @@ export default function DistrictForm({ districtPage }: DistrictFormProps) {
                 id="title"
                 defaultValue={districtPage?.title}
                 className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500 sm:text-sm p-2 border"
-                placeholder="Örn: Kadıköy Vidanjör Hizmeti"
+                placeholder="Örn: Kadıköy Tıkanıklık Açma Hizmeti"
               />
               {state.errors?.title && (
                 <p className="mt-1 text-sm text-red-600">{state.errors.title[0]}</p>

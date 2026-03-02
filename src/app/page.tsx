@@ -35,7 +35,7 @@ export default async function Home() {
 
   const services = [
     {
-      title: "Vidanjör Hizmeti",
+      title: "Tıkanıklık Açma Hizmeti",
       description: "Tıkalı kanalizasyon ve logar temizliği",
       href: "/antalya-vidanjor",
       icon: <Truck className="h-6 w-6 text-orange-600" />,
@@ -233,7 +233,7 @@ export default async function Home() {
               Farkımız
             </span>
             <h2 className="text-3xl lg:text-4xl font-extrabold text-gray-900">
-              Neden <span className="text-orange-600">Güneş Vidanjör?</span>
+              Neden <span className="text-orange-600">Güneş Tıkanıklık?</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               15 yıllık tecrübe, binlerce mutlu müşteri ve Antalya&apos;nın en hızlı vidanjör hizmeti

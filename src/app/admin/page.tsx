@@ -20,7 +20,7 @@ export default async function AdminHome() {
       <div>
         <h1 className="text-3xl font-bold text-gray-900">Hoşgeldiniz</h1>
         <p className="mt-2 text-gray-600">
-          Güneş Vidanjör SEO yönetim paneline hoşgeldiniz. Buradan sitenizin tüm içeriğini yönetebilirsiniz.
+          Güneş Tıkanıklık SEO yönetim paneline hoşgeldiniz. Buradan sitenizin tüm içeriğini yönetebilirsiniz.
         </p>
       </div>
 
@@ -117,7 +117,7 @@ export default async function AdminHome() {
               <div className="h-2 w-2 mt-2 rounded-full bg-blue-500"></div>
               <div>
                 <p className="text-sm font-medium text-gray-900">Hizmet sayfası güncellendi</p>
-                <p className="text-xs text-gray-500 mt-1">"Vidanjör Kiralama" - 5 saat önce</p>
+                <p className="text-xs text-gray-500 mt-1">"Tıkanıklık Açma Kiralama" - 5 saat önce</p>
               </div>
             </div>
             <div className="flex items-start space-x-3 pb-4 border-b border-gray-50 last:border-0 last:pb-0">

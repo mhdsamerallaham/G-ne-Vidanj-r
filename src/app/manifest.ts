@@ -2,9 +2,9 @@ import { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Güneş Vidanjör Antalya",
-    short_name: "Güneş Vidanjör",
-    description: "Antalya'da 7/24 profesyonel vidanjör, tıkalı gider açma ve kanalizasyon temizleme hizmetleri.",
+    name: "Güneş Tıkanıklık Antalya",
+    short_name: "Güneş Tıkanıklık",
+    description: "Antalya'da 7/24 profesyonel vTıkanıklık Açma, tıkalı gider açma ve kanalizasyon temizleme hizmetleri.",
     start_url: "/",
     display: "standalone",
     background_color: "#ffffff",

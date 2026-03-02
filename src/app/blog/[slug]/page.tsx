@@ -109,7 +109,7 @@ export default async function BlogPostPage({ params }: Props) {
             <div className="bg-white rounded-2xl shadow-xl overflow-hidden p-8 md:p-10">
               <div className="flex items-center space-x-2 text-sm text-gray-500 mb-8 pb-8 border-b border-gray-100">
                 <User className="h-4 w-4 text-orange-600" />
-                <span className="font-medium text-gray-900">Güneş Vidanjör</span>
+                <span className="font-medium text-gray-900">Güneş Tıkanıklık</span>
                 <span>•</span>
                 <span className="text-orange-600 font-medium">Blog</span>
               </div>
@@ -164,7 +164,7 @@ export default async function BlogPostPage({ params }: Props) {
                   { title: "Kanal Açma", href: "/hizmetlerimiz/kanal-acma" },
                   { title: "Logar Temizleme", href: "/hizmetlerimiz/logar-temizleme" },
                   { title: "Yağ Tutucu Temizliği", href: "/hizmetlerimiz/yag-tutucu-temizleme" },
-                  { title: "Vidanjör Kiralama", href: "/hizmetlerimiz/vidanjor-kiralama" },
+                  { title: "Tıkanıklık Açma Kiralama", href: "/hizmetlerimiz/vidanjor-kiralama" },
                 ].map((item) => (
                   <li key={item.href}>
                     <Link 

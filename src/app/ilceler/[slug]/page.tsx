@@ -12,7 +12,7 @@ interface PageProps {
 export async function generateMetadata({ params }: PageProps) {
   const { slug } = await params;
   return generateDistrictPageMetadata(slug, {
-    title: `${slug} Vidanjör Hizmeti - Güneş Vidanjör`,
+    title: `${slug} Tıkanıklık Açma Hizmeti - Güneş Tıkanıklık`,
     description: `Antalya ${slug} bölgesinde vidanjör, tıkalı gider açma ve foseptik boşaltma hizmetleri.`,
     canonical: `/ilceler/${slug}`,
   });

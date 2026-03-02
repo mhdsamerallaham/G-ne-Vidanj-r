@@ -13,9 +13,9 @@ export function generateMetadata({
   noindex = false,
   image,
 }: SEOProps) {
-  const siteName = "Güneş Vidanjör";
+  const siteName = "Güneş Tıkanıklık";
   const baseUrl = "https://gunesvidanjor.com";
-  const defaultTitle = "Antalya Vidanjör Hizmeti - 7/24 Acil Müdahale | Güneş Vidanjör";
+  const defaultTitle = "Antalya Tıkanıklık Açma Hizmeti - 7/24 Acil Müdahale | Güneş Tıkanıklık";
   const defaultDescription = "Antalya'da vidanjör, tıkalı gider açma ve kanalizasyon temizleme hizmetleri. 7/24 acil müdahale, uygun fiyat."
 
   const finalTitle = title ? `${title} | ${siteName}` : defaultTitle;
@@ -70,7 +70,7 @@ export function generateServiceSchema(serviceName: string, description: string, 
     "description": description,
     "provider": {
       "@type": "LocalBusiness",
-      "name": "Güneş Vidanjör",
+      "name": "Güneş Tıkanıklık",
       "telephone": phone,
       "address": {
         "@type": "PostalAddress",
@@ -90,7 +90,7 @@ export function generateLocalBusinessSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "Güneş Vidanjör",
+    "name": "Güneş Tıkanıklık",
     "description": "Antalya vidanjör, kanal açma, logar temizleme hizmeti",
     "telephone": "+90 533 581 79 36",
     "address": {
@@ -100,7 +100,7 @@ export function generateLocalBusinessSchema() {
     },
     "areaServed": "Antalya",
     "openingHours": "Mo-Su 00:00-23:59",
-    "serviceType": ["Vidanjör Hizmeti", "Kanal Açma", "Logar Temizleme"]
+    "serviceType": ["Tıkanıklık Açma Hizmeti", "Kanal Açma", "Logar Temizleme"]
   };
 }
 

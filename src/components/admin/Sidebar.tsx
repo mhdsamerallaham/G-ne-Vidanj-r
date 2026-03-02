@@ -28,7 +28,7 @@ export default function Sidebar() {
       <div className="flex items-center justify-center h-16 border-b border-slate-800">
         <Link href="/" className="flex items-center space-x-2 font-bold text-xl">
           <Globe className="h-6 w-6 text-orange-500" />
-          <span>Güneş Vidanjör</span>
+          <span>Güneş Tıkanıklık</span>
         </Link>
       </div>
       <nav className="flex-1 px-4 py-6 space-y-2">

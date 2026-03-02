@@ -16,7 +16,7 @@ export default function Iletisim() {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const services = [
-    { value: 'vidanjor', label: 'Vidanjör Hizmeti' },
+    { value: 'vidanjor', label: 'Tıkanıklık Açma Hizmeti' },
     { value: 'tikali-gider', label: 'Tıkalı Gider Açma' },
     { value: 'foseptik', label: 'Foseptik Boşaltma' },
     { value: 'kanalizasyon', label: 'Kanalizasyon Açma' },

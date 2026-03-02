@@ -4,8 +4,8 @@ import { Metadata } from "next";
 import { MapPin, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Hizmet Bölgelerimiz - Güneş Vidanjör Antalya",
-  description: "Antalya'nın tüm ilçelerinde vidanjör, tıkalı gider açma ve kanalizasyon temizleme hizmeti veriyoruz. Kepez, Muratpaşa, Konyaaltı ve tüm ilçeler.",
+  title: "Hizmet Bölgelerimiz - Güneş Tıkanıklık Antalya",
+  description: "Antalya'nın tüm ilçelerinde vTıkanıklık Açma, tıkalı gider açma ve kanalizasyon temizleme hizmeti veriyoruz. Kepez, Muratpaşa, Konyaaltı ve tüm ilçeler.",
 };
 
 export default async function DistrictsIndexPage() {

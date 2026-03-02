@@ -50,7 +50,7 @@ export default function Hero() {
                   En Hızlı
                 </span>
                 <br />
-                Vidanjör Hizmeti
+                Tıkanıklık Açma Hizmeti
               </h1>
               <div className="flex items-center space-x-2 text-gray-300 text-lg">
                 <MapPin className="h-5 w-5 text-orange-400 flex-shrink-0" />

@@ -38,7 +38,7 @@ function FAQItem({ question, answer }: FAQItemProps) {
 export default function FAQSection() {
   const faqs = [
     {
-      question: "Vidanjör hizmeti ne kadar sürer?",
+      question: "Tıkanıklık Açma hizmeti ne kadar sürer?",
       answer: "Antalya merkezinde 30 dakika içinde müdahale ediyoruz. İlçelere göre bu süre 30-60 dakika arasında değişebilir. Acil durumlar için öncelikli hizmet veriyoruz."
     },
     {
@@ -76,7 +76,7 @@ export default function FAQSection() {
             Sıkça Sorulan <span className="text-orange-600">Sorular</span>
           </h2>
           <p className="text-xl text-gray-600">
-            Vidanjör ve kanal temizleme hizmetleri hakkında merak edilenler
+            Tıkanıklık Açma ve kanal temizleme hizmetleri hakkında merak edilenler
           </p>
         </div>
 

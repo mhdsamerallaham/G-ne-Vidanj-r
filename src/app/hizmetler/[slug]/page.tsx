@@ -12,8 +12,8 @@ interface PageProps {
 export async function generateMetadata({ params }: PageProps) {
   const { slug } = await params;
   return generateServicePageMetadata(slug, {
-    title: `${slug} Hizmeti - Güneş Vidanjör`,
-    description: "Antalya profesyonel vidanjör ve altyapı hizmetleri.",
+    title: `${slug} Hizmeti - Güneş Tıkanıklık`,
+    description: "Antalya profesyonel Tıkanıklık Açma ve altyapı hizmetleri.",
     canonical: `/hizmetler/${slug}`,
   });
 }

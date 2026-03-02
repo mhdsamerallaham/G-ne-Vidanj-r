@@ -6,7 +6,7 @@ import { prisma } from "@/lib/db";
 import { BlogPost } from "@prisma/client";
 
 export const metadata: Metadata = generateMetadata({
-  title: "Vidanjör Blog - Antalya Kanal Temizleme Rehberi",
+  title: "Tıkanıklık Açma Blog - Antalya Kanal Temizleme Rehberi",
   description: "Antalya vidanjör hizmetleri ve tıkalı gider açma hakkında bilgilendirici blog yazıları. Uzman tavsiyeleri ve çözümler.",
   canonical: "/blog",
 });
@@ -103,7 +103,7 @@ export default async function BlogPage() {
                 <div className="flex items-center justify-between mt-auto pt-4 border-t border-gray-100">
                   <div className="flex items-center text-sm text-gray-600">
                     <User className="h-4 w-4 mr-2 text-gray-400" />
-                    <span>Güneş Vidanjör</span>
+                    <span>Güneş Tıkanıklık</span>
                   </div>
                   <Link
                     href={`/blog/${post.slug}`}

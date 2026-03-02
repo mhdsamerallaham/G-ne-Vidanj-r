@@ -5,7 +5,7 @@ import { MapPin, Clock, Phone, CheckCircle, Truck, AlertTriangle, Umbrella } fro
 
 export async function generateMetadata(): Promise<Metadata> {
   return generateDistrictPageMetadata("konyaalti", {
-    title: "Konyaaltı Vidanjör Hizmeti - Sahil Bölgesi 25 Dakikada",
+    title: "Konyaaltı Tıkanıklık Açma Hizmeti - Sahil Bölgesi 25 Dakikada",
     description:
       "Konyaaltı'da vidanjör ve tıkalı gider açma hizmetleri. 25 dakikada müdahale, uygun fiyat. Liman, Çaltı, Arapsuyu ve tüm Konyaaltı mahalleleri.",
     canonical: "/ilceler/konyaalti",
@@ -35,7 +35,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     generateServiceSchema(
-      "Konyaaltı Vidanjör Hizmeti",
+      "Konyaaltı Tıkanıklık Açma Hizmeti",
       "Konyaaltı'da vidanjör ve tıkalı gider açma hizmetleri. 25 dakikada müdahale.",
       "+90 533 581 79 36"
     ),
@@ -75,7 +75,7 @@ export default function KonyaaltiVidanjor() {
                   <span>Sahil Bölgesi Hizmet</span>
                 </div>
                 <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                  Konyaaltı Vidanjör
+                  Konyaaltı Tıkanıklık Açma
                   <span className="text-blue-600"> Hizmeti</span>
                 </h1>
                 <p className="text-xl text-gray-600 leading-relaxed">
@@ -190,7 +190,7 @@ export default function KonyaaltiVidanjor() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-4 mb-12">
             <h2 className="text-3xl font-bold text-gray-900">
-              Turistik Bölge <span className="text-blue-600">Vidanjör Hizmetleri</span>
+              Turistik Bölge <span className="text-blue-600">Tıkanıklık Açma Hizmetleri</span>
             </h2>
             <p className="text-xl text-gray-600">
               Konyaaltı sahili ve turistik tesisler için özel çözümler
@@ -266,7 +266,7 @@ export default function KonyaaltiVidanjor() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-4 mb-12">
             <h2 className="text-3xl font-bold text-gray-900">
-              Konyaaltı Vidanjör <span className="text-blue-600">SSS</span>
+              Konyaaltı Tıkanıklık Açma <span className="text-blue-600">SSS</span>
             </h2>
             <p className="text-xl text-gray-600">
               Konyaaltı'da vidanjör hizmetleri hakkında merak edilenler

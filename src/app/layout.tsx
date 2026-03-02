@@ -24,7 +24,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     metadataBase: new URL("https://gunesvidanjor.com"),
     ...baseGenerateMetadata({
-      title: "Antalya Vidanjör Hizmeti - 7/24 Acil Müdahale",
+      title: "Antalya Tıkanıklık Açma Hizmeti - 7/24 Acil Müdahale",
       description:
         "Antalya'da vidanjör, tıkalı gider açma ve kanalizasyon temizleme hizmetleri. 7/24 acil müdahale, uygun fiyat.",
     }),

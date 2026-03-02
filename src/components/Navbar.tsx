@@ -9,7 +9,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const services = [
-    { name: 'Vidanjör', href: '/antalya-vidanjor' },
+    { name: 'Tıkanıklık Açma', href: '/antalya-vidanjor' },
     { name: 'Tıkalı Gider Açma', href: '/antalya-tikali-gider-acma' },
     { name: 'Kanalizasyon Açma', href: '/antalya-kanalizasyon-acma' },
     { name: 'Logar Temizleme', href: '/antalya-logar-temizleme' },
@@ -20,9 +20,19 @@ export default function Navbar() {
     { name: 'Kepez', href: '/ilceler/kepez' },
     { name: 'Muratpaşa', href: '/ilceler/muratpasa' },
     { name: 'Konyaaltı', href: '/ilceler/konyaalti' },
-    { name: 'Döşemealtı', href: '/ilceler/dosemealti' },
+    { name: 'Akseki', href: '/ilceler/akseki' },
     { name: 'Aksu', href: '/ilceler/aksu' },
+    { name: 'Demre', href: '/ilceler/demre' },
+    { name: 'Döşeme', href: '/ilceler/doser' },
+    { name: 'Elmalı', href: '/ilceler/elbeyli' },
+    { name: 'Finike', href: '/ilceler/finike' },
+    { name: 'Gazipaşa', href: '/ilceler/gazipasa' },
+    { name: 'Gündoğmuş', href: '/ilceler/gundogmus' },
+    { name: 'İbradı', href: '/ilceler/ibradi' },
+    { name: 'Kale', href: '/ilceler/kale' },
+    { name: 'Kaş', href: '/ilceler/kas' },
     { name: 'Kemer', href: '/ilceler/kemer' },
+    { name: 'Kumluca', href: '/ilceler/kumluca' },
     { name: 'Serik', href: '/ilceler/serik' },
   ];
 
@@ -117,33 +127,49 @@ export default function Navbar() {
         {/* Mobile Menu */}
         {isOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t">
+            <div className="px-2 pt-2 pb-3 space-y-2 bg-white border-t">
               <div className="space-y-1">
                 <p className="text-gray-600 font-semibold px-3 py-2 text-sm">Hizmetlerimiz</p>
                 {services.map((service) => (
                   <Link
                     key={service.href}
                     href={service.href}
-                    className="block px-3 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors"
+                    className="block px-3 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors text-sm"
                     onClick={() => setIsOpen(false)}
                   >
                     {service.name}
                   </Link>
                 ))}
+                <Link
+                  href="/hizmetler"
+                  className="block px-3 py-2 text-sm font-semibold text-orange-600 hover:bg-orange-50 rounded-md transition-colors"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Tüm Hizmetleri Gör →
+                </Link>
               </div>
 
               <div className="space-y-1 pt-2">
                 <p className="text-gray-600 font-semibold px-3 py-2 text-sm">İlçeler</p>
-                {districts.map((district) => (
-                  <Link
-                    key={district.href}
-                    href={district.href}
-                    className="block px-3 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-md transition-colors"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {district.name}
-                  </Link>
-                ))}
+                <div className="grid grid-cols-2 gap-1 px-3">
+                  {districts.map((district) => (
+                    <Link
+                      key={district.href}
+                      href={district.href}
+                      className="block py-1 text-xs text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded transition-colors"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {district.name}
+                    </Link>
+                  ))}
+                </div>
+                <Link
+                  href="/ilceler"
+                  className="block px-3 py-2 text-sm font-semibold text-orange-600 hover:bg-orange-50 rounded-md transition-colors"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Tüm İlçeleri Gör →
+                </Link>
               </div>
 
               <Link

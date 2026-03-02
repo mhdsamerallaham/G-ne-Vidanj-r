@@ -85,7 +85,7 @@ export default function ServiceForm({ service }: ServiceFormProps) {
                   id="title"
                   defaultValue={service?.title || ''}
                   className="shadow-sm focus:ring-orange-500 focus:border-orange-500 block w-full sm:text-sm border-gray-300 rounded-md p-2 border"
-                  placeholder="Örn: Vidanjör Kiralama"
+                  placeholder="Örn: Tıkanıklık Açma Kiralama"
                 />
               </div>
               {state.errors?.title && (
